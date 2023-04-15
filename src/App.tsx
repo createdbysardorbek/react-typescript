@@ -1,11 +1,14 @@
 import React from 'react'
+import './App.css'
+import InputField from "./components/InputField/InputField";
 
-function App() {
-  return (
-    <div className='container mx-auto max-w-2xl pt-5'>
-
-    </div>
-  )
+const App: React.FC = () => {
+    return (
+        <div className="App">
+          <span className="heading">Taskify</span>
+            <InputField />
+        </div>
+    )
 }
 
 export default App;
