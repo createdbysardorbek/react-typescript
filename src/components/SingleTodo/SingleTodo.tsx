@@ -12,14 +12,12 @@ interface Props {
 
 const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}: Props) => {
 
-    const handleDone = (id: number) => {
-        setTodos(todos.map(todo => {
-            if (todo.id === id) {
-                return todo = {...todo, isDone: !todo.isDone}
-            }
-            return todo
-        }))
-    }
+    const handleDone = (id: number) => setTodos(todos.map(todo => todo.id === id ? todo = {
+        ...todo,
+        isDone: !todo.isDone
+    } : todo));
+
+    const handleDelete = (id: number) => setTodos(todos.filter(todo => todo.id !== id));
 
     return (
         <form className="single_todo">
@@ -32,7 +30,7 @@ const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}: Props) => {
                     <AiFillEdit/>
                 </span>
                 <span className="icon">
-                    <AiFillDelete/>
+                    <AiFillDelete onClick={() => handleDelete(todo.id)}/>
                 </span>
                 <span className="icon">
                     <MdDone onClick={() => handleDone(todo.id)}/>
