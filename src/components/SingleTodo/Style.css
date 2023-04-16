@@ -1,0 +1,39 @@
+.single_todo {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-vector/scratched-wall-texture_1100-139.jpg?w=740&t=st=1681631283~exp=1681631883~hmac=2a20a0ee4783963bdbb7ab9f47b547ff684aac7a931995f7e7146f043d79a280");
+}
+
+.todos_single-text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos_single-text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+
+    .todos {
+        width: 95%;
+    }
+
+    .single_todo {
+        width: 100%;
+    }
+}
